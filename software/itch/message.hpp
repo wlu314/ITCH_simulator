@@ -49,7 +49,7 @@ struct StockTradingActionMessage {
     std::array<char, 8> stock;          // 8 bytes - stock symbol right padded with spaces
     char trading_state;                 // 1 byte - "H":Halted, "P":Paused, "Q":Quotation, "T":Trading on NASDAQ
     char reserved;                      // 1 byte - Reserved
-    std::array<char, 4> timestamp;      // 4 bytes - trading action reason
+    std::array<char, 4> reason;         // 4 bytes - trading action reason
 };
 struct RegSHORestrictionMessage {
     char message_type;         // 1 byte - 'Y'
